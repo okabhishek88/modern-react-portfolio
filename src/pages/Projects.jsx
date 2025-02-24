@@ -57,7 +57,7 @@ const Projects = () => {
                     &lt; In this section, each project reflects my skills in creating
                     responsive, user-friendly applications. With
                     every project, my goal is to craft innovative solutions that tackle
-                    real-world challenges and enhance the overall user experience. (Check project&apos;s live demo <a href="https://www.linkedin.com/in/okabhishek88/">here</a>) &#47;&gt;
+                    real-world challenges and enhance the overall user experience. Check out the project&apos;s live demo on my <a href="https://www.linkedin.com/in/okabhishek88/" target="_blank">linkedin</a> &#47;&gt;
                 </p>
             </div>
             <div className="list">
