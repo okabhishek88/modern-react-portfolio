@@ -1,0 +1,124 @@
+/* Author - Abhishek Chauhan */
+/* header */
+header {
+    /* border: 1px solid red; */
+    position: fixed;
+    max-width: 1300px;
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+header nav {
+    display: flex;
+    gap: 1.8rem;
+}
+
+header nav span {
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.active {
+    color: #e945e3;
+    text-shadow: 0 0 2px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-image: linear-gradient(to right, #7a43b6, #007bff);
+    margin: 4px 0;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    text-align: left;
+    /* gap: 20px; */
+}
+
+.nav-links a {
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    color: #e945e3;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        /* Show hamburger icon on smaller screens */
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        width: 50%;
+        min-height: 100vh;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+        padding-top: 4rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* for button */
+.close-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 40px);
+    z-index: 100;
+}
+
+/* for close button */
+@media (max-width: 768px) {
+    .close-button {
+        display: block;
+    }
+}
+
+/* for links */
+a {
+    color: #eee;
+}

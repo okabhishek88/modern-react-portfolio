@@ -1,0 +1,188 @@
+/* Author - Abhishek Chauhan */
+/* Variables */
+:root {
+    --color-1: black;
+    --color-2: white;
+    --color-3: rgb(233, 69, 227);
+}
+
+.Education .des {
+    color: #eee5;
+    margin-top: 1rem;
+}
+
+.Education .timeline {
+    margin-top: 2rem;
+    list-style: none;
+    position: relative;
+}
+
+.timeline-event {
+    position: relative;
+    line-height: 2.1rem;
+}
+
+.timeline-event:hover .timeline-event-thumbnail {
+    box-shadow: inset 40em 0 0 0 var(--color-3);
+}
+
+.timeline-event-copy {
+    position: relative;
+    width: 100%;
+}
+
+.timeline-event-copy .titleyear {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeline-event-copy .cgap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.timeline-event-copy .cgap h3 {
+    font-size: 1.5rem;
+}
+
+.timeline-event-thumbnail {
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: var(--color-2);
+    font-size: 0.75em;
+    background-color: var(--color-1);
+    box-shadow: inset 0 0 0 0em #970f6e;
+    display: inline-block;
+    padding: 0.25em 1em 0.2em 1em;
+    border-radius: 0.5rem;
+    font-style: oblique;
+}
+
+.timeline-event {
+    margin-bottom: 2rem;
+}
+
+.Education .alled {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edu {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.edu .edutext {
+    width: 60%;
+}
+
+.edu .odiv {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.odiv h3 {
+    text-align: center;
+}
+
+.slinks {
+    /* border: 1px solid rgba(255, 255, 255, 0.2) */
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.8rem;
+    position: relative;
+}
+
+.slinks .ldiv:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.slinks::before {
+    position: absolute;
+    content: "";
+    width: 67%;
+    height: 70%;
+    background-image: linear-gradient(-45deg, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.2));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    border-radius: 1rem;
+    background-size: 200% auto;
+}
+
+/* Mobile-first adjustments for screens below 480px */
+@media (max-width: 480px) {
+    .timeline-event {
+        line-height: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-event-copy .titleyear {
+        font-size: 1rem;
+        gap: 0.5rem;
+    }
+
+    .timeline-event-copy .cgap h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-event-thumbnail {
+        font-size: 0.7em;
+        padding: 0.2em 0.8em;
+        border-radius: 0.4rem;
+    }
+
+    .timeline-event-copy .cgap {
+        gap: 0.3rem;
+    }
+
+    /* Additional responsiveness for the .edu section */
+    .edu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .edu .edutext,
+    .edu .odiv {
+        width: 100%;
+    }
+
+    /* Adjusting .slinks for small screens */
+    .slinks {
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .slinks .ldiv {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Medium devices (tablets or larger phones) */
+@media (max-width: 960px) {
+    .edu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .edu .edutext,
+    .edu .odiv {
+        width: 100%;
+    }
+}

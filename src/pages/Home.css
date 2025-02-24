@@ -1,0 +1,277 @@
+/* Author - Abhishek Chauhan */
+/* for home */
+.Home {
+    /* border: 2px solid white; */
+    /* height: calc(100vh - 4rem); */
+    margin-top: 5rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* for content */
+.Home .content {
+    /* border: 2px solid red; */
+    font-family: 'MuseoModerno', system-ui;
+    width: 60%;
+}
+
+.name p {
+    font-size: 3.8rem;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.Home .btndown span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name p span {
+    font-size: 3.8rem;
+    background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes gradientAnimation {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.content .description {
+    color: #eee5;
+    margin: 30px 0;
+    border-left: .7em solid #e945e3;
+    padding: 0 0.2rem;
+}
+
+.description p {
+    margin-left: 1rem;
+}
+
+/* for avatar */
+.Home .avatar {
+    /* border: 2px solid green; */
+    text-align: center;
+    width: 40%;
+}
+
+.avatar .cardlogo {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 150px 150px #e945e333;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.cardlogo:hover {
+    box-shadow: 0 150px 150px #e945e355;
+}
+
+.cardlogo img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.info {
+    background-color: #eee;
+    color: #010824;
+    padding: 0.2rem;
+}
+
+.info p {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+}
+
+/* download button css */
+.btndown {
+    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    --border-width: 0.125em;
+    --curve-size: 0.5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #afffff;
+    color: var(--color);
+    cursor: pointer;
+    /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: 0.5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+    transition: color 250ms;
+}
+
+.btndown::after,
+.btndown::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.btndown::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+}
+
+@keyframes move-bg7234 {
+    0% {
+        background-position: 31% 0%;
+    }
+
+    50% {
+        background-position: 70% 100%;
+    }
+
+    100% {
+        background-position: 31% 0%;
+    }
+}
+
+.btndown::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+            /* Top-left */
+            var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+            calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+}
+
+.btndown:where(:hover, :focus)::after {
+    clip-path: polygon(
+            /* Top-left */
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+            calc(100% - var(--border-width)) var(--border-width),
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+    transition: 200ms;
+}
+
+.btndown:where(:hover, :focus) {
+    color: #fff;
+}
+
+/* Make adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .Home {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .Home .content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .Home .avatar {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Adjust for tablets and smaller screens */
+@media (max-width: 768px) {
+    .Home .content {
+        width: 80%;
+    }
+
+    .Home .avatar {
+        width: 80%;
+    }
+
+    .Home .name p {
+        font-size: 2.3rem;
+    }
+
+    .Home .name p span {
+        font-size: 2.3rem;
+    }
+
+    .btndown {
+        font-size: 16px;
+        padding: 0.5em 1em;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+    }
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 480px) {
+    .Home .name p {
+        font-size: 1.7rem;
+    }
+
+    .Home .name p span {
+        font-size: 1.7rem;
+    }
+
+    .Home .description p {
+        font-size: 1rem;
+    }
+
+    .btndown {
+        font-size: 14px;
+        padding: 0.4em 0.8em;
+    }
+
+    .cardlogo img {
+        max-height: 350px;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+        /* Reduce font size */
+        letter-spacing: 0.05rem;
+        /* Tighten letter spacing */
+    }
+}
+
+.space {
+    margin-top: 1rem;
+}

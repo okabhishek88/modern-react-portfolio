@@ -1,0 +1,70 @@
+/* Author - Abhishek Chauhan */
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 4rem;
+    font-family: Poppins, sans-serif;
+    background-color: rgb(1, 8, 36);
+    color: rgb(238, 238, 238);
+    font-size: 1rem;
+    min-height: 100vh;
+    background-image:
+        repeating-linear-gradient(to right, transparent 0 49px, #eee1 49px 50px),
+        repeating-linear-gradient(to bottom, transparent 0 49px, #eee1 49px 50px);
+}
+
+body::before {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    content: "";
+    background-image: linear-gradient(to right, #d02e23, #7a43b6);
+    z-index: -1;
+    top: -200px;
+    left: calc(50% - 200px);
+    border-radius: 50% 50% 0 0;
+    pointer-events: none;
+    filter: blur(220px);
+}
+
+/* for all sections */
+section {
+    max-width: 1300px;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    /* Scrollbar width */
+    width: 10px;
+    /* Horizontal scrollbar width */
+    height: 10px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    /* Light background for the track */
+    background: #f1f1f1;
+}
+
+/* Scrollbar Handle (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #7a43b6, #4a90e2);
+}
+
+/* Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #6a3db1, #3b7ab9);
+}
