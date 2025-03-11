@@ -14,7 +14,7 @@ const Projects = () => {
         },
         {
             name: "AI-Powered Code Reviewer",
-            des: "This is an AI-driven tool designed to help developers review their code by providing feedback and suggestions for improvement. Powered by Google Gemini AI model, his tool also offers real-time suggestions to improve coding efficiency and it helps identify potential issues, suggest optimizations, and enhance code quality in various programming languages.",
+            des: "This is an AI-driven tool designed to help developers review their code by providing feedback and suggestions for improvement. Powered by Google Gemini AI model, this tool also offers real-time suggestions to improve coding efficiency and it helps identify potential issues, suggest optimizations, and enhance code quality in various programming languages.",
             image: "/images/ai-powered-code-reviewer.png",
             mission: "https://github.com/okabhishek88",
         },

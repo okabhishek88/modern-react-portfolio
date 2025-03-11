@@ -8,11 +8,15 @@ const Supply = () => {
     const [listResources] = useState([
         {
             name: "JavaScript 40 Pattern coding problems with solutions!",
-            to: "https://github.com/okabhishek88/",
+            to: "https://github.com/okabhishek88/javascript-pattern-coding-problems-solutions",
         },
         {
             name: "JavaScript Language Complete Notes - A to Z JavaScript Concepts",
             to: "https://github.com/okabhishek88/"
+        },
+        {
+            name: "JavaScript mini projects to master JavaScript & DOM manipulation!",
+            to: "https://github.com/okabhishek88/javascript-miniprojects"
         }
     ])
     return (
